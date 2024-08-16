@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        input[type="text"] {
+            width: calc(100% - 120px);
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        .hidden-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 255, 0.8);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden-button:hover {
+            background-color: rgba(0, 0, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Enigma</h1>
+    <p>Resolva o enigma para acessar o próximo site:</p>
+    <p>Qual é a capital da França?</p>
+    <input type="text" id="answer" placeholder="Digite sua resposta">
+    <button onclick="checkAnswer()">Enviar</button>
+
+    <!-- Visible Button -->
+    <button class="hidden-button" id="hiddenButton" onclick="openHiddenLink()">Clique aqui para uma surpresa</button>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            if (answer === 'paris') {
+                // Redirect to the specified site
+                window.location.href = 'https://jadycarai.github.io/---.-.-.----.----------.---.-.--------------.-.-----------.----------.-.-.-/';
+            } else {
+                alert('Resposta incorreta, tente novamente.');
+            }
+        }
+
+        function openHiddenLink() {
+            window.open('https://tse2.mm.bing.net/th?id=OIP.EJ23H-36BV-ei5E6M3YgQwHaFm&pid=Api&P=0&h=180', '_blank');
+        }
+    </script>
+</body>
+</html>
